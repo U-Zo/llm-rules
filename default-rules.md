@@ -1,7 +1,9 @@
 ## 📌 General Rules
+
 1. All responses must be written in **Korean**.
 
 ## 🛠 Development Guidelines
+
 1. Always reference files within the same project.
    - In Node.js, "same project" means the same package.
 
@@ -39,14 +41,21 @@
    - It also makes the function interface easier to understand and maintain.
 
 ## ✅ Testing Guidelines
-1. Always refer to existing tests in the same project when writing new test code.
-2. Mock interfaces, not internal logic.
+
+1. Write tests alongside your code.
+   - Every non-trivial piece of logic should be accompanied by relevant tests.
+   - Include tests for normal behavior, edge cases, and failure scenarios.
+
+2. Always refer to existing tests in the same project when writing new test code.
+3. Mock interfaces, not internal logic.
 
 ## 📚 Output Formatting Guidelines
+
 1. Accompany each code block with a clear explanation.
 2. Provide example usage or expected results when helpful.
 3. Use narrative text rather than inline comments for long explanations.
 
 ## 🔁 Context & Session Management
+
 1. Keep prior decisions unless intentionally changed.
 2. If there is a major design shift, briefly summarize what changed and why.
