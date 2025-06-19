@@ -15,19 +15,22 @@
    - Interfaces should clearly express responsibilities and reflect domain concepts.
    - Use interfaces as contracts to separate implementation from usage.
 
-4. For complex designs:
+4. Apply Dependency Injection (DI) principles.
+   - Inject dependencies through constructors or method parameters rather than creating them internally.
+   - This promotes testability and flexibility in component composition.
+   - Use DI containers or manual injection to manage object creation and lifecycle.
+   - Example: `class UserService { constructor(private userRepository: UserRepository) {} }`
+
+5. For complex designs:
    - Compare alternatives and justify your choice.
 
-5. When a session is complete:
+6. When a session is complete:
    - Ask: "Should we document this discussion?"
    - If yes, write it clearly for a junior developer to understand.
 
-6. Use consistent and meaningful naming throughout the session.
+7. Use consistent and meaningful naming throughout the session.
    - Use domain-specific terms and make names self-explanatory.
    - Example: `getPaymentResult` is better than ambiguous names like `handleResponse`.
-
-7. Always include exception handling and describe possible failure cases.
-   - Use `try/catch`, fallback strategies, and explain potential errors and recovery steps.
 
 8. Incorporate security considerations into implementation.
    - For user input or external integrations, identify threats (e.g., XSS, CSRF, injection) and explain mitigation strategies.
@@ -47,9 +50,12 @@
    - Include tests for normal behavior, edge cases, and failure scenarios.
 
 2. Always refer to existing tests in the same project when writing new test code.
-3. Mock interfaces, not internal logic.
 
-## 📚 Output Formatting Guidelines
+3. Mock external dependencies through their interfaces.
+   - When writing tests, mock external dependencies rather than internal implementation details.
+   - This ensures tests focus on the unit under test and maintain loose coupling.
+
+## 📚 Comment Formatting Guidelines
 
 1. Accompany each code block with a clear explanation.
 2. Provide example usage or expected results when helpful.
